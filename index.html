@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GadgetMamas — Launching Soon in Rajahmundry, India! Its happening tho. Eat. Sleep. Gadget. Repeat.">
+  <title>GadgetMamas — Eat. Sleep. Gadget. Repeat. | Coming Soon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Layer -->
+  <div class="bg-layer" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+    <div class="particles" id="particles"></div>
+    <div class="stars" id="stars"></div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#" class="nav-logo" aria-label="GadgetMamas Home">
+        <img src="assets/images/logo.png" alt="GadgetMamas — Eat. Sleep. Gadget. Repeat." width="180" height="56">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open game menu" aria-expanded="false">
+        <span class="toggle-joystick" aria-hidden="true">
+          <svg class="joystick-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="22" width="48" height="28" rx="14" fill="url(#joyGrad)" stroke="#2D2D3A" stroke-width="2"/>
+            <circle cx="22" cy="36" r="9" fill="#fff" stroke="#2D2D3A" stroke-width="2"/>
+            <circle cx="22" cy="36" r="4" fill="#FF5DA2"/>
+            <rect x="38" y="30" width="6" height="6" rx="1.5" fill="#fff" stroke="#2D2D3A" stroke-width="1.5"/>
+            <rect x="46" y="30" width="6" height="6" rx="1.5" fill="#fff" stroke="#2D2D3A" stroke-width="1.5"/>
+            <rect x="42" y="38" width="6" height="6" rx="1.5" fill="#fff" stroke="#2D2D3A" stroke-width="1.5"/>
+            <rect x="38" y="34" width="6" height="6" rx="1.5" fill="#FF5DA2" stroke="#2D2D3A" stroke-width="1.5"/>
+            <defs>
+              <linearGradient id="joyGrad" x1="8" y1="22" x2="56" y2="50">
+                <stop offset="0%" stop-color="#9D4EDD"/>
+                <stop offset="100%" stop-color="#7B2CFB"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="toggle-close" aria-hidden="true">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="28" fill="#FF5DA2" stroke="#2D2D3A" stroke-width="2"/>
+            <line x1="22" y1="22" x2="42" y2="42" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+            <line x1="42" y1="22" x2="22" y2="42" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </button>
+
+      <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+      <div class="nav-drawer" id="navDrawer" aria-hidden="true">
+        <div class="menu-bg" aria-hidden="true">
+          <div class="menu-blob menu-blob-1"></div>
+          <div class="menu-blob menu-blob-2"></div>
+          <div class="menu-blob menu-blob-3"></div>
+          <div class="menu-stars"></div>
+          <div class="menu-gadgets">
+            <span class="menu-gadget mg-1">🎮</span>
+            <span class="menu-gadget mg-2">🚁</span>
+            <span class="menu-gadget mg-3">🎧</span>
+            <span class="menu-gadget mg-4">📱</span>
+            <span class="menu-gadget mg-5">⌚</span>
+            <span class="menu-gadget mg-6">🔋</span>
+            <span class="menu-gadget mg-7">💨</span>
+            <span class="menu-gadget mg-8">📷</span>
+            <span class="menu-gadget mg-9">🔊</span>
+            <span class="menu-gadget mg-10">🕹️</span>
+            <span class="menu-gadget mg-11">⚡</span>
+            <span class="menu-gadget mg-12">🤖</span>
+          </div>
+          <p class="menu-tagline">LEVEL UP!</p>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about"><span class="link-emoji">🤖</span> About</a></li>
+          <li><a href="#products"><span class="link-emoji">📦</span> Products</a></li>
+          <li><a href="#contact"><span class="link-emoji">📬</span> Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+      <div class="container hero-grid">
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+          <div class="hero-badge fade-in">
+            <span class="badge-antenna" aria-hidden="true"></span>
+            <div class="badge-body">
+              <span class="badge-spark badge-spark-l" aria-hidden="true">✨</span>
+              <span class="badge-icon" aria-hidden="true">🚀</span>
+              <div class="badge-text">
+                <span class="badge-line">Launching Soon in India its...</span>
+                <span class="badge-india">Rajahmundry Tho! <span class="badge-flag">📍</span></span>
+              </div>
+              <span class="badge-spark badge-spark-r" aria-hidden="true">⚡</span>
+            </div>
+            <div class="badge-leds" aria-hidden="true">
+              <span class="badge-led"></span>
+              <span class="badge-led"></span>
+              <span class="badge-led"></span>
+              <span class="badge-led"></span>
+              <span class="badge-led"></span>
+            </div>
+            <span class="badge-sticker">SOON™</span>
+          </div>
+          <h1 class="hero-logo fade-in">
+            <img
+              src="assets/images/gm.png"
+              alt="GadgetMamas — Eat. Sleep. Gadget. Repeat."
+              class="hero-logo-img"
+              width="520"
+              height="200"
+            >
+          </h1>
+          <div class="hero-desc-box fade-in">
+            <div class="desc-sparks" aria-hidden="true">
+              <span>✨</span><span>⚡</span><span>💜</span>
+            </div>
+            <div class="desc-gadgets" aria-hidden="true">
+              <span class="desc-g">📱</span>
+              <span class="desc-g">🎧</span>
+              <span class="desc-g">⌚</span>
+            </div>
+            <p class="hero-desc">
+              <span class="desc-tag">📍 Launching in Rajahmundry</span>
+              India's happiest destination for gadgets, accessories &amp; smart electronics.
+              <span class="desc-fun">No cap — its gonna be crazy good. 🔥</span>
+            </p>
+          </div>
+          <div class="hero-buttons fade-in">
+            <a href="#coming-soon" class="btn btn-hero btn-launch">
+              <span class="btn-sparks" aria-hidden="true">✨⚡✨</span>
+              <span class="btn-icon btn-rockets">🚀</span>
+              <span class="btn-text">
+                <span class="btn-label">Launching Soon</span>
+                <span class="btn-sub">hold tight bestie!</span>
+              </span>
+            </a>
+            <a href="#products" class="btn btn-hero btn-explore">
+              <span class="btn-icon btn-gamepad">🎮</span>
+              <span class="btn-text">
+                <span class="btn-label">Explore Soon</span>
+                <span class="btn-sub">sneak peek 👀</span>
+              </span>
+            </a>
+          </div>
+
+          <!-- Funny Floating Bubbles -->
+          <div class="speech-bubbles" aria-hidden="true">
+            <div class="bubble bubble-1">
+              <span class="bubble-emoji">🤖</span>
+              Our robots are still unboxing awesomeness.
+            </div>
+            <div class="bubble bubble-2">
+              <span class="bubble-emoji">🚁</span>
+              Drone is warming up...
+            </div>
+            <div class="bubble bubble-3">
+              <span class="bubble-emoji">💨</span>
+              Fan spinning at maximum speed...
+            </div>
+            <div class="bubble bubble-4">
+              <span class="bubble-emoji">🎮</span>
+              Loading unlimited gadgets...
+            </div>
+            <div class="bubble bubble-5">
+              <span class="bubble-emoji">⚡</span>
+              Charging excitement...
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Mascot -->
+        <div class="hero-mascot fade-in" id="heroMascot">
+          <div class="mascot-glow"></div>
+
+          <!-- Floating Gadgets Around Hero -->
+          <div class="floating-gadgets" aria-hidden="true">
+            <div class="gadget gadget-1" data-depth="0.3" title="Drone">🚁</div>
+            <div class="gadget gadget-2" data-depth="0.5" title="Earbuds">🎧</div>
+            <div class="gadget gadget-3" data-depth="0.2" title="Headphones">🎧</div>
+            <div class="gadget gadget-4" data-depth="0.4" title="Power Bank">🔋</div>
+            <div class="gadget gadget-5" data-depth="0.6" title="Mini Fan">💨</div>
+            <div class="gadget gadget-6" data-depth="0.3" title="Smart Watch">⌚</div>
+            <div class="gadget gadget-7" data-depth="0.5" title="Gaming Controller">🎮</div>
+            <div class="gadget gadget-8" data-depth="0.2" title="Bluetooth Speaker">🔊</div>
+            <div class="gadget gadget-9" data-depth="0.4" title="USB Hub">🔌</div>
+            <div class="gadget gadget-10" data-depth="0.3" title="Camera">📷</div>
+          </div>
+
+          <img
+            src="assets/images/gm2.png"
+            alt="GadgetMamas mascot — cheerful robot with drone, laptop, and coffee"
+            class="mascot-img"
+            width="480"
+            height="480"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="products">
+      <div class="container">
+        <div class="section-header fade-in-scroll">
+          <div class="section-title-wrap">
+            <h2 class="section-title">
+              <span class="title-why">Why</span>
+              <span class="title-logo-block">
+                <img
+                  src="assets/images/logo1.png"
+                  alt="GadgetMamas"
+                  class="section-logo"
+                  width="280"
+                  height="70"
+                >
+                <div class="title-road" aria-hidden="true">
+                  <div class="road-surface"></div>
+                  <div class="road-dash"></div>
+                  <span class="road-car">🚗</span>
+                  <span class="road-dust rd-1">💨</span>
+                  <span class="road-dust rd-2">💨</span>
+                  <span class="road-bike">🏍️</span>
+                </div>
+                <span class="road-honk">BEEP BEEP!</span>
+              </span>
+              <span class="title-q">?</span>
+            </h2>
+          </div>
+          <p class="section-subtitle">Everything you love about gadgets — reimagined with joy. Vroom vroom. 🏁</p>
+        </div>
+        <div class="features-grid">
+
+          <article class="feature-card feature-card--gadgets fade-in-scroll">
+            <div class="feature-bg-blob"></div>
+            <div class="feature-orbit" aria-hidden="true">
+              <span class="orbit-gadget">📱</span>
+              <span class="orbit-gadget">⌚</span>
+              <span class="orbit-gadget">🎧</span>
+            </div>
+            <div class="feature-icon-wrap">
+              <svg class="feature-svg" viewBox="0 0 120 120" aria-hidden="true">
+                <rect x="30" y="15" width="60" height="90" rx="12" fill="#fff" stroke="#2D2D3A" stroke-width="3"/>
+                <rect x="38" y="28" width="44" height="58" rx="6" fill="#7B2CFB" class="svg-screen"/>
+                <circle cx="48" cy="42" r="5" fill="#FF5DA2" class="svg-blink"/>
+                <circle cx="62" cy="42" r="5" fill="#FFD700" class="svg-blink svg-blink-d1"/>
+                <circle cx="76" cy="42" r="5" fill="#4ADE80" class="svg-blink svg-blink-d2"/>
+                <rect x="44" y="55" width="32" height="4" rx="2" fill="rgba(255,255,255,0.5)"/>
+                <rect x="44" y="64" width="24" height="4" rx="2" fill="rgba(255,255,255,0.35)"/>
+                <circle cx="60" cy="96" r="5" fill="#2D2D3A"/>
+                <text x="95" y="30" font-size="18">✨</text>
+              </svg>
+            </div>
+            <span class="feature-sticker">HOT!</span>
+            <h3 class="feature-title">Latest Gadgets</h3>
+            <p class="feature-desc">Fresh drops of the coolest tech, curated just for you. Always ahead of the trend.</p>
+            <div class="card-shine"></div>
+          </article>
+
+          <article class="feature-card feature-card--original fade-in-scroll">
+            <div class="feature-bg-blob"></div>
+            <div class="feature-orbit" aria-hidden="true">
+              <span class="orbit-gadget">✨</span>
+              <span class="orbit-gadget">🏅</span>
+              <span class="orbit-gadget">💎</span>
+            </div>
+            <div class="feature-icon-wrap">
+              <svg class="feature-svg" viewBox="0 0 120 120" aria-hidden="true">
+                <circle cx="60" cy="60" r="42" fill="#FFD700" stroke="#2D2D3A" stroke-width="3"/>
+                <circle cx="60" cy="60" r="32" fill="#fff" stroke="#2D2D3A" stroke-width="2.5"/>
+                <path d="M45 62 L55 72 L78 48" fill="none" stroke="#7B2CFB" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" class="svg-check"/>
+                <g class="svg-sparkle-spin">
+                  <text x="18" y="35" font-size="16">⭐</text>
+                  <text x="88" y="88" font-size="14">✨</text>
+                </g>
+              </svg>
+            </div>
+            <span class="feature-sticker">100% REAL</span>
+            <h3 class="feature-title">Original Products</h3>
+            <p class="feature-desc">100% authentic gear from trusted brands. No fakes, no compromises — ever.</p>
+            <div class="card-shine"></div>
+          </article>
+
+          <article class="feature-card feature-card--delivery fade-in-scroll">
+            <div class="feature-bg-blob"></div>
+            <div class="feature-orbit" aria-hidden="true">
+              <span class="orbit-gadget">📦</span>
+              <span class="orbit-gadget">⚡</span>
+              <span class="orbit-gadget">🚀</span>
+            </div>
+            <div class="feature-icon-wrap">
+              <svg class="feature-svg" viewBox="0 0 120 120" aria-hidden="true">
+                <rect x="25" y="50" width="50" height="40" rx="8" fill="#FF5DA2" stroke="#2D2D3A" stroke-width="3"/>
+                <path d="M75 55 L95 45 L95 75 L75 85 Z" fill="#9D4EDD" stroke="#2D2D3A" stroke-width="3"/>
+                <rect x="30" y="55" width="15" height="10" rx="2" fill="#fff" opacity="0.6"/>
+                <g class="svg-rocket-bob">
+                  <path d="M55 20 L65 20 L62 35 L58 35 Z" fill="#7B2CFB" stroke="#2D2D3A" stroke-width="2"/>
+                  <ellipse cx="60" cy="38" rx="8" ry="4" fill="#FF5DA2" class="svg-flame"/>
+                </g>
+                <line x1="15" y1="70" x2="5" y2="70" stroke="#2D2D3A" stroke-width="3" stroke-linecap="round" class="svg-speed"/>
+                <line x1="18" y1="80" x2="8" y2="85" stroke="#2D2D3A" stroke-width="2.5" stroke-linecap="round" class="svg-speed svg-speed-d1"/>
+                <line x1="18" y1="60" x2="8" y2="55" stroke="#2D2D3A" stroke-width="2.5" stroke-linecap="round" class="svg-speed svg-speed-d2"/>
+              </svg>
+            </div>
+            <span class="feature-sticker">ZOOM!</span>
+            <h3 class="feature-title">Fast Delivery</h3>
+            <p class="feature-desc">Lightning-fast shipping across India. Your gadgets arrive before the hype fades.</p>
+            <div class="card-shine"></div>
+          </article>
+
+          <article class="feature-card feature-card--price fade-in-scroll">
+            <div class="feature-bg-blob"></div>
+            <div class="feature-orbit" aria-hidden="true">
+              <span class="orbit-gadget">💰</span>
+              <span class="orbit-gadget">🏷️</span>
+              <span class="orbit-gadget">🪙</span>
+            </div>
+            <div class="feature-icon-wrap">
+              <svg class="feature-svg" viewBox="0 0 120 120" aria-hidden="true">
+                <rect x="35" y="25" width="50" height="30" rx="6" fill="#FF5DA2" stroke="#2D2D3A" stroke-width="3" transform="rotate(-8 60 40)"/>
+                <circle cx="42" cy="38" r="6" fill="#fff" stroke="#2D2D3A" stroke-width="2" transform="rotate(-8 60 40)"/>
+                <text x="52" y="44" font-size="14" font-weight="bold" fill="#fff" transform="rotate(-8 60 40)">₹</text>
+                <circle cx="45" cy="78" r="14" fill="#FFD700" stroke="#2D2D3A" stroke-width="2.5" class="svg-coin svg-coin-1"/>
+                <circle cx="65" cy="85" r="12" fill="#FFD700" stroke="#2D2D3A" stroke-width="2.5" class="svg-coin svg-coin-2"/>
+                <circle cx="78" cy="72" r="10" fill="#FFD700" stroke="#2D2D3A" stroke-width="2.5" class="svg-coin svg-coin-3"/>
+                <text x="40" y="83" font-size="10" font-weight="bold" fill="#2D2D3A">₹</text>
+                <text x="60" y="89" font-size="9" font-weight="bold" fill="#2D2D3A">₹</text>
+                <text x="74" y="76" font-size="8" font-weight="bold" fill="#2D2D3A">₹</text>
+              </svg>
+            </div>
+            <span class="feature-sticker">DEAL!</span>
+            <h3 class="feature-title">Affordable Prices</h3>
+            <p class="feature-desc">Premium tech without the premium price tag. Smart deals for smart shoppers.</p>
+            <div class="card-shine"></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Coming Soon Section -->
+    <section class="coming-soon" id="coming-soon">
+      <div class="container">
+        <div class="coming-soon-inner fade-in-scroll">
+          <div class="cs-deco cs-deco-left" aria-hidden="true">🔌</div>
+          <div class="cs-deco cs-deco-right" aria-hidden="true">⚡</div>
+          <div class="cs-float-gadgets" aria-hidden="true">
+            <span class="cs-gadget csg-1">🔋</span>
+            <span class="cs-gadget csg-2">🤖</span>
+            <span class="cs-gadget csg-3">💡</span>
+            <span class="cs-gadget csg-4">🎮</span>
+          </div>
+
+          <h2 class="coming-soon-title">Something BIG is Charging...</h2>
+          <p class="coming-soon-subtitle">Our robots are still learning how to unbox things without getting too excited.</p>
+
+          <!-- Cartoon Battery Progress -->
+          <div class="charge-station">
+            <div class="charge-header">
+              <span class="charge-bolt">⚡</span>
+              <span class="charge-title">POWER LEVEL</span>
+              <span class="charge-bolt charge-bolt-r">⚡</span>
+            </div>
+            <div class="progress-wrapper">
+              <div class="battery-body">
+                <div class="progress-bar" id="progressBar">
+                  <div class="progress-fill" id="progressFill">
+                    <div class="progress-sparks" aria-hidden="true">
+                      <span>✨</span><span>⚡</span><span>✨</span>
+                    </div>
+                    <div class="progress-robot" aria-hidden="true">🤖</div>
+                  </div>
+                  <div class="progress-zap-track" aria-hidden="true"></div>
+                </div>
+                <div class="battery-cap"></div>
+              </div>
+              <div class="progress-meta">
+                <span class="progress-label" id="progressLabel">75%</span>
+                <span class="progress-status">
+                  <span class="status-dot"></span> CHARGING...
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cartoon Countdown -->
+          <div class="countdown cartoon-countdown" id="countdown" aria-label="Launch countdown">
+            <div class="countdown-item cd-days">
+              <div class="cd-orbit" aria-hidden="true"><span>📅</span><span>🌙</span></div>
+              <div class="cd-icon">📅</div>
+              <div class="cd-screen">
+                <span class="countdown-number" id="days">45</span>
+              </div>
+              <span class="countdown-unit">Days</span>
+            </div>
+            <div class="countdown-separator"><span>⚡</span></div>
+            <div class="countdown-item cd-hours">
+              <div class="cd-orbit" aria-hidden="true"><span>⏰</span><span>🔔</span></div>
+              <div class="cd-icon">⏰</div>
+              <div class="cd-screen">
+                <span class="countdown-number" id="hours">08</span>
+              </div>
+              <span class="countdown-unit">Hours</span>
+            </div>
+            <div class="countdown-separator"><span>⚡</span></div>
+            <div class="countdown-item cd-minutes">
+              <div class="cd-orbit" aria-hidden="true"><span>⏱️</span><span>⌛</span></div>
+              <div class="cd-icon">⏱️</div>
+              <div class="cd-screen">
+                <span class="countdown-number" id="minutes">20</span>
+              </div>
+              <span class="countdown-unit">Minutes</span>
+            </div>
+            <div class="countdown-separator"><span>⚡</span></div>
+            <div class="countdown-item cd-seconds">
+              <div class="cd-orbit" aria-hidden="true"><span>💥</span><span>⚡</span></div>
+              <div class="cd-icon">⚡</div>
+              <div class="cd-screen">
+                <span class="countdown-number" id="seconds">40</span>
+              </div>
+              <span class="countdown-unit">Seconds</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" id="contact">
+      <div class="celebration-blasts celebration-top" aria-hidden="true">
+        <span class="blast b1">🎉</span>
+        <span class="blast b2">✨</span>
+        <span class="blast b3">🎊</span>
+        <span class="blast b4">💥</span>
+        <span class="blast b5">⭐</span>
+        <span class="blast b6">🎈</span>
+        <span class="blast b7">💜</span>
+        <span class="blast b8">🔥</span>
+      </div>
+      <div class="container">
+        <div class="newsletter-card fade-in-scroll">
+          <div class="nl-confetti" aria-hidden="true">
+            <span class="cf cf-1">📧</span>
+            <span class="cf cf-2">🎁</span>
+            <span class="cf cf-3">⚡</span>
+            <span class="cf cf-4">🎉</span>
+            <span class="cf cf-5">💌</span>
+            <span class="cf cf-6">✨</span>
+          </div>
+          <span class="nl-sticker">VIP LIST</span>
+          <div class="newsletter-content">
+            <h2 class="newsletter-title">
+              <span class="nl-icon nl-bell">🔔</span>
+              Be the First to Know!
+              <span class="nl-icon nl-party">🎉</span>
+            </h2>
+            <p class="newsletter-desc">Drop your email — we will ping you the second we launch. Early birds get the craziest deals!</p>
+            <form class="newsletter-form" id="newsletterForm" novalidate>
+              <div class="form-group">
+                <label for="email" class="sr-only">Email address</label>
+                <div class="input-cartoon">
+                  <span class="input-icon">📬</span>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="your.email@here.com"
+                    required
+                    autocomplete="email"
+                  >
+                </div>
+                <button type="submit" class="btn btn-notify btn-cartoon-notify">
+                  <span class="btn-burst">💥</span>
+                  Notify Me
+                  <span class="btn-rocket">🚀</span>
+                </button>
+              </div>
+              <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+          <div class="newsletter-orbit" aria-hidden="true">
+            <span class="nl-orbit-g">🤖</span>
+            <span class="nl-orbit-g">📱</span>
+            <span class="nl-orbit-g">🎮</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Section -->
+    <section class="social-section">
+      <div class="celebration-blasts celebration-mid" aria-hidden="true">
+        <span class="blast b1">🎊</span>
+        <span class="blast b2">✨</span>
+        <span class="blast b3">🎉</span>
+        <span class="blast b4">💥</span>
+        <span class="blast b5">🌟</span>
+        <span class="blast b6">🎈</span>
+      </div>
+      <div class="container">
+        <div class="social-header fade-in-scroll">
+          <span class="social-deco social-deco-l">📢</span>
+          <h2 class="social-title">Follow the Gadget Gang</h2>
+          <span class="social-deco social-deco-r">👋</span>
+        </div>
+        <p class="social-sub">Join the chaos. Zero boring posts, we promise.</p>
+        <div class="social-links fade-in-scroll">
+          <a href="#" class="social-link sl-insta" aria-label="Instagram" title="Instagram">
+            <span class="sl-emoji">📸</span>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="social-link sl-fb" aria-label="Facebook" title="Facebook">
+            <span class="sl-emoji">👍</span>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" class="social-link sl-yt" aria-label="YouTube" title="YouTube">
+            <span class="sl-emoji">▶️</span>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="#" class="social-link sl-x" aria-label="X (Twitter)" title="X">
+            <span class="sl-emoji">🐦</span>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="social-link sl-li" aria-label="LinkedIn" title="LinkedIn">
+            <span class="sl-emoji">💼</span>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-blasts" aria-hidden="true">
+      <span class="fblast fb1">🎉</span>
+      <span class="fblast fb2">✨</span>
+      <span class="fblast fb3">🎊</span>
+      <span class="fblast fb4">💥</span>
+      <span class="fblast fb5">⭐</span>
+      <span class="fblast fb6">🎈</span>
+      <span class="fblast fb7">💜</span>
+      <span class="fblast fb8">🔥</span>
+      <span class="fblast fb9">🎉</span>
+      <span class="fblast fb10">✨</span>
+    </div>
+    <div class="footer-gadgets" aria-hidden="true">
+      <span class="fg fg-1">🤖</span>
+      <span class="fg fg-2">📱</span>
+      <span class="fg fg-3">🎮</span>
+      <span class="fg fg-4">🚗</span>
+    </div>
+    <div class="container">
+      <div class="footer-card">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <a href="#" class="footer-logo">
+              <img src="assets/images/logo.png" alt="GadgetMamas — Eat. Sleep. Gadget. Repeat." width="160" height="50">
+            </a>
+            <p class="footer-tagline">Eat. Sleep. Gadget. Repeat.</p>
+            <span class="footer-loc">📍 Rajahmundry — coming soon tho!</span>
+          </div>
+          <div class="footer-copy">
+            <p class="footer-party">🎊 PARTY MODE: ON 🎊</p>
+            <p>&copy; 2026 GadgetMamas</p>
+            <p>Made with ❤️ and lots of coffee. ☕</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="celebration-overlay" id="celebrationOverlay" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
