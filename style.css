@@ -596,11 +596,79 @@ input {
 }
 
 .badge-india {
-  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
+  width: 100%;
+  min-width: 148px;
+}
+
+.badge-city {
+  font-size: 1.05rem;
   font-weight: 800;
   color: #fff;
   text-shadow: 2px 2px 0 #2D2D3A;
   animation: indiaPulse 2s ease-in-out infinite;
+  letter-spacing: 0.3px;
+}
+
+.godavari-bridge {
+  position: relative;
+  height: 28px;
+  width: 100%;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+  border: 2px solid rgba(45, 45, 58, 0.45);
+  border-top: none;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.godavari-bridge-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.bridge-sun {
+  animation: bridgeSunGlow 2.8s ease-in-out infinite;
+  transform-origin: 172px 8px;
+}
+
+.bridge-water {
+  animation: bridgeWaterFlow 3s linear infinite;
+}
+
+.bridge-wave {
+  animation: bridgeWaveDrift 2s ease-in-out infinite;
+}
+
+.bridge-reflection {
+  animation: bridgeWaveDrift 2.4s ease-in-out infinite reverse;
+}
+
+.bridge-train {
+  animation: bridgeTrainCross 5s linear infinite;
+}
+
+@keyframes bridgeSunGlow {
+  0%, 100% { filter: drop-shadow(0 0 2px rgba(255, 229, 102, 0.6)); transform: scale(1); }
+  50% { filter: drop-shadow(0 0 6px rgba(255, 180, 50, 0.9)); transform: scale(1.08); }
+}
+
+@keyframes bridgeWaterFlow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-12px); }
+}
+
+@keyframes bridgeWaveDrift {
+  0%, 100% { transform: translateX(0); opacity: 0.75; }
+  50% { transform: translateX(-4px); opacity: 1; }
+}
+
+@keyframes bridgeTrainCross {
+  0% { transform: translateX(-22px); }
+  100% { transform: translateX(210px); }
 }
 
 @keyframes indiaPulse {

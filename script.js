@@ -335,8 +335,8 @@
         }
 
         formMessage.textContent = data.alreadySubscribed
-          ? 'You\'re already on the VIP list! We\'ve got you. 🎉'
-          : '🎉 You\'re on the VIP list! We\'ll ping you when GadgetMamas drops in Rajahmundry!';
+          ? 'Yo youre already on the VIP list! We got you fr. 🎉'
+          : '🎉 Youre on the VIP list! We\'ll ping you when GadgetMamas drops in Rajahmundry, bet!';
         formMessage.classList.add('success');
         emailInput.value = '';
         triggerCelebration();
