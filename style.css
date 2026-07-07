@@ -2023,12 +2023,15 @@ input {
 
 .newsletter-head {
   margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 }
 
 .nl-sticker {
   display: inline-block;
   padding: 4px 14px;
-  margin-bottom: 14px;
   font-size: 0.65rem;
   font-weight: 800;
   letter-spacing: 1.5px;
@@ -2038,7 +2041,14 @@ input {
   border-radius: 8px;
   box-shadow: 3px 3px 0 #2D2D3A;
   transform: rotate(-2deg);
-  animation: stickerWiggle 2.5s ease-in-out infinite;
+  animation: nlStickerWiggle 2.5s ease-in-out infinite;
+  flex-shrink: 0;
+  -webkit-text-fill-color: #2D2D3A;
+}
+
+@keyframes nlStickerWiggle {
+  0%, 100% { transform: rotate(-2deg) scale(1); }
+  50% { transform: rotate(2deg) scale(1.04); }
 }
 
 .cf {
@@ -2064,23 +2074,34 @@ input {
 
 .newsletter-title {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.newsletter-title-main {
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 8px;
-  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-size: clamp(1.35rem, 4.5vw, 2rem);
   font-weight: 900;
-  margin-bottom: 10px;
-  color: var(--text);
+  line-height: 1.25;
   background: var(--gradient-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  max-width: 100%;
 }
 
 .nl-icon {
   font-size: 1.3rem;
   -webkit-text-fill-color: initial;
+  background: none;
 }
 
 .nl-bell { animation: nlBellRing 1s ease-in-out infinite; }
@@ -2616,7 +2637,18 @@ input {
   }
 
   .newsletter-inner {
+    padding: 0 8px;
+  }
+
+  .newsletter-title-main {
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+    line-height: 1.3;
     padding: 0 4px;
+  }
+
+  .nl-sticker {
+    font-size: 0.6rem;
+    padding: 3px 12px;
   }
 
   .newsletter-form .form-group {
