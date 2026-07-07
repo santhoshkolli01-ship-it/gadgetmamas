@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="GadgetMamas — Launching Soon in Rajahmundry, India! Its happening tho. Eat. Sleep. Gadget. Repeat.">
   <title>GadgetMamas — Eat. Sleep. Gadget. Repeat. | Coming Soon</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,6 +28,11 @@
       <a href="#" class="nav-logo" aria-label="GadgetMamas Home">
         <img src="assets/images/logo.png" alt="GadgetMamas — Eat. Sleep. Gadget. Repeat." width="180" height="56">
       </a>
+      <ul class="nav-links nav-links-desktop">
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Open game menu" aria-expanded="false">
         <span class="toggle-joystick" aria-hidden="true">
           <svg class="joystick-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
@@ -54,39 +59,39 @@
           </svg>
         </span>
       </button>
-
-      <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
-
-      <div class="nav-drawer" id="navDrawer" aria-hidden="true">
-        <div class="menu-bg" aria-hidden="true">
-          <div class="menu-blob menu-blob-1"></div>
-          <div class="menu-blob menu-blob-2"></div>
-          <div class="menu-blob menu-blob-3"></div>
-          <div class="menu-stars"></div>
-          <div class="menu-gadgets">
-            <span class="menu-gadget mg-1">🎮</span>
-            <span class="menu-gadget mg-2">🚁</span>
-            <span class="menu-gadget mg-3">🎧</span>
-            <span class="menu-gadget mg-4">📱</span>
-            <span class="menu-gadget mg-5">⌚</span>
-            <span class="menu-gadget mg-6">🔋</span>
-            <span class="menu-gadget mg-7">💨</span>
-            <span class="menu-gadget mg-8">📷</span>
-            <span class="menu-gadget mg-9">🔊</span>
-            <span class="menu-gadget mg-10">🕹️</span>
-            <span class="menu-gadget mg-11">⚡</span>
-            <span class="menu-gadget mg-12">🤖</span>
-          </div>
-          <p class="menu-tagline">LEVEL UP!</p>
-        </div>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#about"><span class="link-emoji">🤖</span> About</a></li>
-          <li><a href="#products"><span class="link-emoji">📦</span> Products</a></li>
-          <li><a href="#contact"><span class="link-emoji">📬</span> Contact</a></li>
-        </ul>
-      </div>
     </nav>
   </header>
+
+  <!-- Mobile menu (outside header — fixes Android scroll bug) -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="nav-drawer" id="navDrawer" aria-hidden="true">
+    <div class="menu-bg" aria-hidden="true">
+      <div class="menu-blob menu-blob-1"></div>
+      <div class="menu-blob menu-blob-2"></div>
+      <div class="menu-blob menu-blob-3"></div>
+      <div class="menu-stars"></div>
+      <div class="menu-gadgets">
+        <span class="menu-gadget mg-1">🎮</span>
+        <span class="menu-gadget mg-2">🚁</span>
+        <span class="menu-gadget mg-3">🎧</span>
+        <span class="menu-gadget mg-4">📱</span>
+        <span class="menu-gadget mg-5">⌚</span>
+        <span class="menu-gadget mg-6">🔋</span>
+        <span class="menu-gadget mg-7">💨</span>
+        <span class="menu-gadget mg-8">📷</span>
+        <span class="menu-gadget mg-9">🔊</span>
+        <span class="menu-gadget mg-10">🕹️</span>
+        <span class="menu-gadget mg-11">⚡</span>
+        <span class="menu-gadget mg-12">🤖</span>
+      </div>
+      <p class="menu-tagline">LEVEL UP!</p>
+    </div>
+    <ul class="nav-links nav-links-mobile" id="navLinks">
+      <li><a href="#about"><span class="link-emoji">🤖</span> About</a></li>
+      <li><a href="#products"><span class="link-emoji">📦</span> Products</a></li>
+      <li><a href="#contact"><span class="link-emoji">📬</span> Contact</a></li>
+    </ul>
+  </div>
 
   <main>
 
@@ -440,6 +445,14 @@
 
     <!-- Newsletter Section -->
     <section class="newsletter" id="contact">
+      <div class="nl-bg-deco" aria-hidden="true">
+        <span class="cf cf-1">📧</span>
+        <span class="cf cf-2">🎁</span>
+        <span class="cf cf-3">⚡</span>
+        <span class="cf cf-4">🎉</span>
+        <span class="cf cf-5">💌</span>
+        <span class="cf cf-6">✨</span>
+      </div>
       <div class="celebration-blasts celebration-top" aria-hidden="true">
         <span class="blast b1">🎉</span>
         <span class="blast b2">✨</span>
@@ -450,47 +463,39 @@
         <span class="blast b7">💜</span>
         <span class="blast b8">🔥</span>
       </div>
-      <div class="container">
-        <div class="newsletter-card fade-in-scroll">
-          <div class="nl-confetti" aria-hidden="true">
-            <span class="cf cf-1">📧</span>
-            <span class="cf cf-2">🎁</span>
-            <span class="cf cf-3">⚡</span>
-            <span class="cf cf-4">🎉</span>
-            <span class="cf cf-5">💌</span>
-            <span class="cf cf-6">✨</span>
-          </div>
-          <span class="nl-sticker">VIP LIST</span>
-          <div class="newsletter-content">
+      <div class="container newsletter-wrap">
+        <div class="newsletter-inner fade-in-scroll">
+          <div class="newsletter-head">
+            <span class="nl-sticker">VIP LIST</span>
             <h2 class="newsletter-title">
               <span class="nl-icon nl-bell">🔔</span>
               Be the First to Know!
               <span class="nl-icon nl-party">🎉</span>
             </h2>
             <p class="newsletter-desc">Drop your email — we will ping you the second we launch. Early birds get the craziest deals!</p>
-            <form class="newsletter-form" id="newsletterForm" novalidate>
-              <div class="form-group">
-                <label for="email" class="sr-only">Email address</label>
-                <div class="input-cartoon">
-                  <span class="input-icon">📬</span>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="your.email@here.com"
-                    required
-                    autocomplete="email"
-                  >
-                </div>
-                <button type="submit" class="btn btn-notify btn-cartoon-notify">
-                  <span class="btn-burst">💥</span>
-                  Notify Me
-                  <span class="btn-rocket">🚀</span>
-                </button>
-              </div>
-              <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
-            </form>
           </div>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <div class="form-group">
+              <label for="email" class="sr-only">Email address</label>
+              <div class="input-cartoon">
+                <span class="input-icon">📬</span>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="your.email@here.com"
+                  required
+                  autocomplete="email"
+                >
+              </div>
+              <button type="submit" class="btn btn-notify btn-cartoon-notify">
+                <span class="btn-burst">💥</span>
+                Notify Me
+                <span class="btn-rocket">🚀</span>
+              </button>
+            </div>
+            <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+          </form>
           <div class="newsletter-orbit" aria-hidden="true">
             <span class="nl-orbit-g">🤖</span>
             <span class="nl-orbit-g">📱</span>

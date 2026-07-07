@@ -85,7 +85,7 @@
     if (!header) return;
 
     function onScroll() {
-      header.classList.toggle('scrolled', window.scrollY > 40);
+      header.classList.toggle('scrolled', window.scrollY > 10);
     }
 
     window.addEventListener('scroll', onScroll, { passive: true });
