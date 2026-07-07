@@ -285,15 +285,16 @@
     }
   }
 
-  /* --- Newsletter Form (Frontend Only) --- */
+  /* --- Newsletter Form --- */
   function initNewsletter() {
     if (!newsletterForm) return;
 
-    newsletterForm.addEventListener('submit', function (e) {
+    newsletterForm.addEventListener('submit', async function (e) {
       e.preventDefault();
 
       const emailInput = document.getElementById('email');
       const email = emailInput.value.trim();
+      const btn = newsletterForm.querySelector('.btn-notify');
 
       formMessage.className = 'form-message';
 
@@ -311,22 +312,48 @@
         return;
       }
 
-      formMessage.textContent = '🎉 You\'re on the VIP list! We\'ll ping you when GadgetMamas drops in Rajahmundry!';
-      formMessage.classList.add('success');
-      emailInput.value = '';
-
-      triggerCelebration();
-
-      const btn = newsletterForm.querySelector('.btn-notify');
+      const originalHTML = btn ? btn.innerHTML : '';
       if (btn) {
-        const originalHTML = btn.innerHTML;
-        btn.innerHTML = '✓ You\'re In! 🎊';
+        btn.innerHTML = 'Saving... ⏳';
         btn.style.pointerEvents = 'none';
+        btn.disabled = true;
+      }
 
-        setTimeout(function () {
-          btn.innerHTML = originalHTML;
-          btn.style.pointerEvents = '';
-        }, 3000);
+      try {
+        const response = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email }),
+        });
+
+        const data = await response.json().catch(function () {
+          return {};
+        });
+
+        if (!response.ok || !data.ok) {
+          throw new Error(data.error || 'Could not save your email. Try again in a moment.');
+        }
+
+        formMessage.textContent = data.alreadySubscribed
+          ? 'You\'re already on the VIP list! We\'ve got you. 🎉'
+          : '🎉 You\'re on the VIP list! We\'ll ping you when GadgetMamas drops in Rajahmundry!';
+        formMessage.classList.add('success');
+        emailInput.value = '';
+        triggerCelebration();
+
+        if (btn) btn.innerHTML = '✓ You\'re In! 🎊';
+      } catch (err) {
+        formMessage.textContent = err.message || 'Network error — please try again.';
+        formMessage.classList.add('error');
+        if (btn) btn.innerHTML = originalHTML;
+      } finally {
+        if (btn) {
+          setTimeout(function () {
+            btn.innerHTML = originalHTML;
+            btn.style.pointerEvents = '';
+            btn.disabled = false;
+          }, 3000);
+        }
       }
     });
   }
