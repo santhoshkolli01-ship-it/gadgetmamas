@@ -20,13 +20,17 @@
   const starsContainer = document.getElementById('stars');
   const celebrationOverlay = document.getElementById('celebrationOverlay');
 
+  const welcomeSparkles = document.getElementById('welcomeSparkles');
+
   const BURST_EMOJIS = ['🎉', '🎊', '✨', '💥', '⭐', '🎈', '💜', '🔥', '🚀', '💫'];
+  const WELCOME_SPARKLES = ['✨', '⭐', '💫', '🎉', '🎊', '💜', '💖', '🌟', '⚡', '🔥'];
 
   /* --- Electronics icons for background particles --- */
   const ELECTRONICS_ICONS = ['📱', '💻', '⌚', '🎧', '🔋', '📷', '🎮', '🔌', '💡', '🖥️', '📡', '🔊'];
 
   /* --- Initialize --- */
   function init() {
+    initWelcomeSparkles();
     initParticles();
     initStars();
     initHeaderScroll();
@@ -356,6 +360,69 @@
         }
       }
     });
+  }
+
+  /* --- Welcome sparkles on page load --- */
+  function initWelcomeSparkles() {
+    if (!welcomeSparkles) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    welcomeSparkles.innerHTML = '';
+    welcomeSparkles.classList.add('active');
+    welcomeSparkles.setAttribute('aria-hidden', 'false');
+
+    const isMobile = window.innerWidth < 640;
+    const floatCount = isMobile ? 18 : 32;
+    const burstOrigins = [
+      { x: 0.12, y: 0.18 },
+      { x: 0.88, y: 0.16 },
+      { x: 0.5, y: 0.1 },
+      { x: 0.22, y: 0.42 },
+      { x: 0.78, y: 0.4 }
+    ];
+
+    burstOrigins.forEach(function (origin, index) {
+      const burstCount = isMobile ? 6 : 10;
+      const ox = origin.x * window.innerWidth;
+      const oy = origin.y * window.innerHeight;
+
+      for (let i = 0; i < burstCount; i++) {
+        const sparkle = document.createElement('span');
+        sparkle.className = 'welcome-sparkle welcome-sparkle--burst';
+        sparkle.textContent = WELCOME_SPARKLES[Math.floor(Math.random() * WELCOME_SPARKLES.length)];
+        sparkle.style.left = ox + 'px';
+        sparkle.style.top = oy + 'px';
+
+        const angle = (Math.PI * 2 * i) / burstCount + Math.random() * 0.6;
+        const dist = 70 + Math.random() * 160;
+        sparkle.style.setProperty('--wx', Math.cos(angle) * dist + 'px');
+        sparkle.style.setProperty('--wy', Math.sin(angle) * dist + 'px');
+        sparkle.style.animationDelay = (index * 0.08 + Math.random() * 0.15) + 's';
+        sparkle.style.fontSize = (0.7 + Math.random() * 1.1) + 'rem';
+
+        welcomeSparkles.appendChild(sparkle);
+      }
+    });
+
+    for (let i = 0; i < floatCount; i++) {
+      const sparkle = document.createElement('span');
+      const useRain = Math.random() > 0.45;
+      sparkle.className = 'welcome-sparkle ' + (useRain ? 'welcome-sparkle--rain' : 'welcome-sparkle--float');
+      sparkle.textContent = WELCOME_SPARKLES[Math.floor(Math.random() * WELCOME_SPARKLES.length)];
+      sparkle.style.left = (Math.random() * 100) + '%';
+      sparkle.style.top = useRain ? (-8 - Math.random() * 12) + '%' : (Math.random() * 100) + '%';
+      sparkle.style.animationDelay = (Math.random() * 0.8) + 's';
+      sparkle.style.animationDuration = (1.6 + Math.random() * 1.4) + 's';
+      sparkle.style.fontSize = (0.65 + Math.random() * 1) + 'rem';
+
+      welcomeSparkles.appendChild(sparkle);
+    }
+
+    setTimeout(function () {
+      welcomeSparkles.classList.remove('active');
+      welcomeSparkles.innerHTML = '';
+      welcomeSparkles.setAttribute('aria-hidden', 'true');
+    }, 2800);
   }
 
   /* --- Celebration burst on subscribe --- */
